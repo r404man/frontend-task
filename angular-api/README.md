@@ -11,5 +11,5 @@
 - PUT `api/test/user` Update row in DB
 
 # Settings to start
-`npm install` - to Setup project's modules
-`node server.js` - to Start server
+`npm install` - to Setup project's modules <br />
+`node server.js` - to Start server 
