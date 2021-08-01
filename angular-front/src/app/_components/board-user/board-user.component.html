@@ -1,0 +1,16 @@
+<div class="container">
+  <app-contact-form [contact]='null' [isActive]='true'></app-contact-form>
+  <div class="" *ngIf="message === null; else notfound">
+    <div class="contacts-list" *ngIf="contacts != null; else loading">
+      <app-contact-item *ngFor="let contact of contacts" [contact]='contact' [token]='token'>
+      </app-contact-item>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p> Загрузка ...</p>
+</ng-template>
+<ng-template #notfound>
+  <h1>Контакты еще не созданы! </h1>
+</ng-template>

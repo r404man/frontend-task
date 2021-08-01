@@ -1,0 +1,33 @@
+<div [ngClass]='{isActive: isActive}' class="contacts-form">
+    <h1>{{formTitle()}}</h1>
+    <form name="form" #contactform="ngForm" (submit)="contactform.form.valid && onSubmit()" novalidate>
+        <div class="form-group">
+            <label for="name">
+                Имя
+            </label>
+            <input class="form-control" name="name" id="name" type="text" #name="ngModel" [(ngModel)]="form.name"
+                required placeholder="Ваше имя...">
+
+            <div class="alert alert-danger" role="alert" *ngIf="name.errors && contactform.submitted">
+                Name обязателен! 
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">
+                Телефон
+            </label>
+
+            <input type="text" name="phone" id="phone" #phone="ngModel" [(ngModel)]="form.phone" required
+                class="form-control" minlength="10" mask="+0(000)000-0000" placeholder="Номер без 8, +7">
+            <div class="alert alert-danger" role="alert" *ngIf="phone.errors && contactform.submitted">
+                <div *ngIf="phone.errors.required">Phone обязателен!</div>
+                <div *ngIf="phone.errors.minlength">
+                    Phone должен быть длинной не менее 10 символов
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary text-align-center" type="submit" value="{{formBtnTitle()}}">
+        </div>
+    </form>
+</div>

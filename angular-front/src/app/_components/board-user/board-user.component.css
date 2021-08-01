@@ -1,0 +1,10 @@
+.contacts-list {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.contacts-list > * {
+    width: 33%;
+    padding: 0px 10px 10px 0px;
+}

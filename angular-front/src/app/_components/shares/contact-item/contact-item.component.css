@@ -1,0 +1,35 @@
+.contact-card {
+    display: flex;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 5px 10px;
+    flex-direction: column;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.card-name {
+    margin-bottom: 10px;
+}
+
+.controls__btn {
+    display: flex;
+}
+
+.delete-btn {
+    margin-right: 2rem;
+}
+
+/* Form */
+.isActive {
+    display: block;
+}
+
+/* Btn */
+.Save {
+    background-color: greenyellow;
+}

@@ -1,0 +1,25 @@
+<div class="contact-card" #contactCard>
+    <div class="card-details">
+        <div class="card-name">{{contact.name}}</div>
+        <div class="card-phone">{{contact.phone}}</div>
+    </div>
+    <div class="card-controls">
+        <div class="controls__btn">
+            <div class="delete-btn">
+                <button type="button" class="btn btn-outline-danger" (click)="deleteContact(contact._id)">
+                   Удалить
+                </button>
+            </div>
+            <div class="edit-btn">
+                <button type="button" class="btn btn-outline-info" (click)="showEditForm()">
+                    {{isEdit}}
+                </button>
+            </div>
+        </div>
+        <div [ngClass]="{isActive: isOpen}" class="controls__form">
+            <div class="controls-form">
+                <app-contact-form [contact]='contact' [isActive]='isOpen'></app-contact-form>
+            </div>
+        </div>
+    </div>
+</div>

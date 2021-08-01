@@ -1,0 +1,20 @@
+.contacts-form {
+    display: none;
+    border-radius: 6px;
+    border: 1px solid #c2c2c2;
+    padding: 5px 10px;
+}
+
+.isActive { 
+    display: block !important;
+    margin-top: 10px;
+}
+
+.form-group:last-child {
+    text-align: center;
+}
+
+h1 {
+
+    font-size: 24px;
+}
