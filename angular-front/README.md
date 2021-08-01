@@ -11,8 +11,9 @@
 - PUT `api/test/user` Update row in DB
 
 # Settings to start
-Run in CLI to config Angular Application
-first - `npm install`
-second - `ng serve --port 8081` for a dev server. 
-third - navigate to `http://localhost:8081/`.
+Run in CLI to config Angular Application <br />
+
+First - `npm install` <br />
+Second - `ng serve --port 8081` for a dev server. <br />
+Third - navigate to `http://localhost:8081/`.
 
